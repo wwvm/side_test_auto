@@ -1,0 +1,98 @@
+{
+  "id": "e2c50ff5-d75c-45fa-9c2c-ffa3abaa5170",
+  "version": "2.0",
+  "name": "Demo",
+  "url": "http://10.124.209.157:9999/maintenance-tools/apic-tracker",
+  "tests": [{
+    "id": "f31b68e3-cb1a-41a2-a969-b304cac9e38b",
+    "name": "EPTracker",
+    "commands": [{
+      "id": "bedc5c4c-c691-4f20-854f-a411e24cd4bd",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87b02e37-7267-498f-bf2c-95e6d9970199",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e2f1757-13bc-412f-a2ad-a4f4ef4262d8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(), \"禁止\")]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83e22006-093e-452f-8ee1-cb14af62eb51",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[contains(text(), '请选择APIC')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85fbbccd-963e-496f-919f-c201b6a26317",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//tr/td[3]",
+      "targets": [],
+      "value": "res"
+    }, {
+      "id": "8380575e-7f84-4428-a08b-994b57f6fdec",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bb45865-600a-48bf-8023-1a78f48176b4",
+      "comment": "",
+      "command": "echo",
+      "target": "${res}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cf680fe-2fd4-4276-88f3-dcd4382ea324",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//tr[${res}]/td[3]",
+      "targets": [],
+      "value": "value"
+    }, {
+      "id": "63a4fc59-73a1-486e-99fd-25f17288bfda",
+      "comment": "",
+      "command": "echo",
+      "target": "${value}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "414921c2-01b5-4f07-82e6-c5f4a28a0b00",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${res} - 1",
+      "targets": [],
+      "value": "res"
+    }, {
+      "id": "6ae83fd3-e6f5-4d8d-8bce-a67949e62c72",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${res} > 0",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "fd56b4e6-3012-42ce-aae9-9b1ed980f4ca",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f31b68e3-cb1a-41a2-a969-b304cac9e38b"]
+  }],
+  "urls": ["http://10.124.209.157:9999/maintenance-tools/apic-tracker"],
+  "plugins": []
+}

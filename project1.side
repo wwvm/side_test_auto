@@ -1,0 +1,145 @@
+{
+  "id": "43d59ca5-6871-47ef-be8e-14312be9c1d8",
+  "version": "2.0",
+  "name": "aaa",
+  "url": "http://10.124.209.157:9999",
+  "tests": [{
+    "id": "aa6053bc-5847-4623-93a5-6d091829f24d",
+    "name": "login",
+    "commands": [{
+      "id": "ca021fc2-9639-41b5-a6e7-52ac0a0454c8",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c819ae5c-65a5-41e2-af87-cb1bfa927a1a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1680x970",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79ab3089-f098-40d7-b582-00e5b1efcbee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c82-0 > .ant-input",
+      "targets": [
+        ["css=.ng-tns-c82-0 > .ant-input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59558f02-5111-4b66-acfa-a012b08250ba",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.ng-valid", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "root"
+    }, {
+      "id": "2e9cf014-9c29-42f8-a9f9-591f98e99da4",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='password']",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//nz-form-item[3]/nz-form-control/div/div/nz-input-group/input", "xpath:position"]
+      ],
+      "value": "Cisco123!"
+    }, {
+      "id": "6dae89df-d280-4c9f-831f-ad1807940a5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-form-button",
+      "targets": [
+        ["css=.login-form-button", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'登录')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d5702b3a-8896-4e91-b37c-e94fccedc76b",
+    "name": "case1",
+    "commands": [{
+      "id": "b11b8362-26af-4afe-9a6d-5b34799d2569",
+      "comment": "",
+      "command": "run",
+      "target": "login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87a69422-acfa-441d-8484-71ecb21befa3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=运维工具",
+      "targets": [
+        ["linkText=运维工具", "linkText"],
+        ["css=.ant-menu-item:nth-child(5) > .ng-star-inserted", "css:finder"],
+        ["xpath=//a[contains(@href, '/maintenance-tools/apic-tracker')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'运维工具')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "587e85b8-dcc5-4f4e-aa2e-3d345fe266d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c92-16 > .ant-select-selection-search-input",
+      "targets": [
+        ["css=.ng-tns-c92-16 > .ant-select-selection-search-input", "css:finder"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "baefb8a6-3eac-449a-80a5-81e7af2b0854",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-select-item-option-active > .ant-select-item-option-content",
+      "targets": [
+        ["css=.ant-select-item-option-active > .ant-select-item-option-content", "css:finder"],
+        ["xpath=//div[@id='cdk-overlay-0']/nz-option-container/div/cdk-virtual-scroll-viewport/div/nz-option-item[2]/div", "xpath:idRelative"],
+        ["xpath=//nz-option-item[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86b52330-0544-402e-854b-01ee6c23fa32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c92-17 > .ant-select-selection-search-input",
+      "targets": [
+        ["css=.ng-tns-c92-17 > .ant-select-selection-search-input", "css:finder"],
+        ["xpath=//div[2]/div/nz-select/nz-select-top-control/nz-select-search/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2ee3fd3-787b-46bb-967a-a58cfb8ec6d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-select-item-option-content",
+      "targets": [
+        ["css=.ant-select-item-option-content", "css:finder"],
+        ["xpath=//div[@id='cdk-overlay-1']/nz-option-container/div/cdk-virtual-scroll-viewport/div/nz-option-item/div", "xpath:idRelative"],
+        ["xpath=//nz-option-item/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "72a6b67c-bd4d-4dfe-b505-5bd5bb92abb1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aa6053bc-5847-4623-93a5-6d091829f24d"]
+  }],
+  "urls": ["http://10.124.209.157:9999/"],
+  "plugins": []
+}
